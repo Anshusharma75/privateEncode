@@ -1,4 +1,3 @@
-#Tg:ChauhanMahesh/DroneBots
 #Github.com/vasusen-code
 import datetime
 import motor.motor_asyncio
