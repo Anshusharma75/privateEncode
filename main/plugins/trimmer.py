@@ -1,4 +1,3 @@
-#TG:ChauhanMahesh/DroneBots
 #Github.com/Vasusen-code
 
 
