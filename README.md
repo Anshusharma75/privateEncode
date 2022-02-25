@@ -74,7 +74,3 @@ Add this buildpack if deploying manually:
 - `https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git`
 - `heroku/python`
 
-LICENSE:
-
-[![License](https://www.gnu.org/graphics/gplv3-127x51.png)](LICENSE)
-
