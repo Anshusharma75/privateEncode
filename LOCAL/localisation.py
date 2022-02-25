@@ -11,7 +11,7 @@ SUPPORT_LINK = "https://t.me/MOVIES_AND_SERIES_REQUESTING"
 
 info_text = "This bot is developed by @Anshu888o\n\nWritten in python library TELETHON.\n\nBot by : @INDIAHDM0VIES\nSupport : @MOVIES_AND_SERIES_REQUESTING\n\nV1.4"   
 
-help_text = """**v1.4**
+help_text = """**v1.5**
 
 •`Encode` - encode your video into different lib format or resolution
 
