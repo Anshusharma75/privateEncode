@@ -113,8 +113,8 @@ async def set_timer(event, list1, list2):
     now = time.time()
     list2.append(f'{now}')
     list1.append(f'{event.sender_id}')
-    await event.client.send_message(event.chat_id, 'You can start a new process again after 5 minutes.')
-    await asyncio.sleep(300)
+    await event.client.send_message(event.chat_id, 'You can start a new process again after 30 seconds.')
+    await asyncio.sleep(30)
     list2.pop(int(timer.index(f'{now}')))
     list1.pop(int(process1.index(f'{event.sender_id}')))
     
@@ -124,7 +124,7 @@ async def check_timer(event, list1, list2):
         index = list1.index(f'{event.sender_id}')
         last = list2[int(index)]
         present = time.time()
-        return False, f"You have to wait {300-round(present-float(last))} seconds more to start a new process!"
+        return False, f"You have to wait {30-round(present-float(last))} seconds more to start a new process!"
     else:
         return True, None
     
@@ -254,7 +254,7 @@ async def fcomp(event):
         index = process1.index(f'{event.sender_id}')
         last = timer[int(index)]
         present = time.time()
-        return await event.answer(f"You have to wait {300-round(present-float(last))} seconds more to start a new process!", alert=True)
+        return await event.answer(f"You have to wait {30-round(present-float(last))} seconds more to start a new process!", alert=True)
     button = await event.get_message()
     msg = await button.get_reply_message()
     if not os.path.isdir("encodemedia"):
@@ -265,8 +265,8 @@ async def fcomp(event):
         now = time.time()
         timer.append(f'{now}')
         process1.append(f'{event.sender_id}')
-        await event.client.send_message(event.chat_id, 'You can start a new process again after 5 minutes.')
-        await asyncio.sleep(300)
+        await event.client.send_message(event.chat_id, 'You can start a new process again after 30 seconds.')
+        await asyncio.sleep(30)
         timer.pop(int(timer.index(f'{now}')))
         process1.pop(int(process1.index(f'{event.sender_id}')))
     else:
@@ -281,7 +281,7 @@ async def hcomp(event):
         index = process1.index(f'{event.sender_id}')
         last = timer[int(index)]
         present = time.time()
-        return await event.answer(f"You have to wait {300-round(present-float(last))} seconds more to start a new process!", alert=True)
+        return await event.answer(f"You have to wait {30-round(present-float(last))} seconds more to start a new process!", alert=True)
     button = await event.get_message()
     msg = await button.get_reply_message()
     if not os.path.isdir("encodemedia"):
@@ -292,8 +292,8 @@ async def hcomp(event):
         now = time.time()
         timer.append(f'{now}')
         process1.append(f'{event.sender_id}')
-        await event.client.send_message(event.chat_id, 'You can start a new process again after 5 minutes.')
-        await asyncio.sleep(300)
+        await event.client.send_message(event.chat_id, 'You can start a new process again after 30 seconds.')
+        await asyncio.sleep(30)
         timer.pop(int(timer.index(f'{now}')))
         process1.pop(int(process1.index(f'{event.sender_id}')))
     else:
@@ -422,7 +422,7 @@ async def ss_(event):
         index = process1.index(f'{event.sender_id}')
         last = timer[int(index)]
         present = time.time()
-        return await event.answer(f"You have to wait {120-round(present-float(last))} seconds more to start a new process!", alert=True)
+        return await event.answer(f"You have to wait {20-round(present-float(last))} seconds more to start a new process!", alert=True)
     button = await event.get_message()
     msg = await button.get_reply_message()
     await event.delete()
@@ -430,8 +430,8 @@ async def ss_(event):
     now = time.time()
     timer.append(f'{now}')
     process1.append(f'{event.sender_id}')
-    await event.client.send_message(event.chat_id, 'You can start a new process again after 2 minutes.')
-    await asyncio.sleep(120)
+    await event.client.send_message(event.chat_id, 'You can start a new process again after 20 seconds.')
+    await asyncio.sleep(20)
     timer.pop(int(timer.index(f'{now}')))
     process1.pop(int(process1.index(f'{event.sender_id}')))
     
